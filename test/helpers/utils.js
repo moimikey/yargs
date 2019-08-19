@@ -21,6 +21,9 @@ exports.checkOutput = function checkOutput (f, argv, cb) {
   const logs = []
   const warnings = []
 
+  console._error = console.error
+  console._log = console.log
+  console._warn = console.warn
   console.error = (msg) => { errors.push(msg) }
   console.log = (msg) => { logs.push(msg) }
   console.warn = (msg) => { warnings.push(msg) }
