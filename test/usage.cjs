@@ -596,7 +596,6 @@ describe('usage tests', () => {
             // ignore the error, we only test the output here
           }
         });
-        console.info(r);
         r.errors
           .join('\n')
           .split(/\n+/)
@@ -2525,7 +2524,7 @@ describe('usage tests', () => {
         ]);
     });
 
-    it('allows a builder to add more than one usage with mutiple usage calls', () => {
+    it('allows a builder to add more than one usage with multiple usage calls', () => {
       const r = checkUsage(() =>
         yargs('upload --help')
           .command(
